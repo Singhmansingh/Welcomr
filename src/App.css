@@ -9,3 +9,40 @@
     background-color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
 }
+
+/********** TICKER *******/
+.ticker-container {
+    display: flex;
+    background: linear-gradient(180deg, rgba(126, 139, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+    border-radius: 1em;
+    overflow: hidden;
+    min-height: 2.25em;
+}
+
+.ticker-container button {
+    flex: 1;
+    background: none;
+    transition: background-color ease 250ms;
+}
+
+.ticker-container button:hover {
+    background: rgba(5, 5, 5, 0.082);
+}
+
+.ticker-container input {
+    flex: 1;
+    padding: 0;
+    text-align: center;
+    place-items: center;
+    display: grid;
+    width: 100%;
+    border: none;
+    background: none;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
