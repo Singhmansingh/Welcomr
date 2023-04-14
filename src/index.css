@@ -11,6 +11,10 @@ html {
   height: 100vh;
   --screen-width: 393px;
   --screen-height: 852px;
+
+  /* color pallet */
+  --light-grey: rgba(238, 238, 238, 1);
+  --primary-blue:rgba(126, 139, 255, 1);
 }
 
 *,*::before,*::after {

@@ -1,23 +1,101 @@
+import AccessibilityTag from '../components/AccessibilityTag';
+import ReviewCard from '../components/ReviewCard';
 import Ticker from '../components/Ticker';
 import './EventDetails.css';
 
 export default function EventDetails(){
+
+    const EVENT = {
+        event_id:293949172654,
+        event_name:"Bollywood Blackout Night",
+        event_general_price: 34.99,
+        event_rating:4.5,
+        event_following: 226,
+        event_date: new Date('09-30-2023'),
+        event_location: {
+            location_id: 2093283,
+            location_name: "The Rec Room",
+            location_address: "255 Bremner Blvd.",
+            location_city:"Toronto",
+            location_state_code:"ON",
+            location_postal_code:"M5V 3M9",
+            location_common_address: function(){
+                return `${this.location_address},${this.location_city}, ${this.location_state_code}, ${this.location_postal_code}`
+            }
+        },
+        event_accessibility:[
+            {icon: '♿',title:"Wheelchair Accessible"},
+            {icon: '🖖',title:"Sign-Language"},
+            {icon: '🦯',title:"Vision Assistance"},
+            {icon: '🅿',title:"Accessible Parking"},
+            {icon: '🚻',title:"Accessible Washrooms"},
+            {icon: '♿',title:"Reserved Seating"},
+            
+        ],
+        event_tickets:[
+            {
+                type:"General Admission",
+                demo:"13-64",
+                price:34.99
+            },
+            {
+                type:"Child Ticket",
+                demo:"6-12",
+                price:29.99
+            },
+            {
+                type:"Senior Ticket",
+                demo:"65+",
+                price:24.99
+            },
+        ],
+        event_organizer:{
+            organizer_id:222938231,
+            organizer_name:'Toronto Bollywood Club',
+            organizer_followers:15678,
+            organizer_contactNumber:'(416)-598-3839'
+        },
+        event_reviews:[
+            {
+                username:"Radhika Sharma",
+                city:"Toronto",
+                rating:4,
+                message:"The Bollywood Blackout night event was super fun! The music was great, the atmosphere was lively, and the dance floor was packed. I wish there were more traditional Bollywood songs played instead of just the latest remixes. Overall, a great night out!"
+            },
+            {
+                username:"Harpreet Singh",
+                city:"Toronto",
+                rating:5,
+                message:"I had a blast at the Bollywood Blackout night event. The energy was high, and everyone was having a great time. Bar lines were pretty long with pricey drinks. Waiting for the next Bollywood Blackout Night to attend!"
+            }
+        ]
+
+    }
+
+    const accessibility = EVENT.event_accessibility;
+    const tickets=EVENT.event_tickets;
+    const reviews=EVENT.event_reviews;
+
+    const organizer=EVENT.event_organizer;
+
+    const format = (value) => Intl.NumberFormat('en-US').format(value);
+
     return (
     <div id="EventDetails">
         <div className="details-heading" style={{backgroundImage:`url(src/assets/event_picture.png)`}}>
             <div className="event-name">
                 <div className="heading">
-                <h1>Bollywood Blackout Night</h1>
-                <span className="txt-sm rating">⭐4.5</span>
+                <h1>{EVENT.event_name}</h1>
+                <span className="txt-sm rating">⭐{EVENT.event_rating}</span>
 
                 </div>
-                <div className="txt-sm price shadow">$49.99</div>
+                <div className="txt-sm price shadow">${EVENT.event_general_price}</div>
             </div>
-            <p className="txt-sm following">👯‍♀️ 226 People have saved this event!</p>
+            <p className="txt-sm following">👯‍♀️ {format(EVENT.event_following)} People have saved this event!</p>
             <div className="owner-details shadow">
                 <div className="owner">
-                <h2>By <strong>Toronto Bollywood Club</strong></h2>
-                <p className="txt-sm"><strong>15,678 Followers</strong></p>
+                <h2>By <strong>{organizer.organizer_name}</strong></h2>
+                <p className="txt-sm"><strong>{format(organizer.organizer_followers)} Followers</strong></p>
 
                 </div>
                 <div className="follow">
@@ -43,57 +121,43 @@ export default function EventDetails(){
             <section>
                 <h2>Accessibility & Accommodations</h2>
                 <div className="accessibility-grid">
-                    <div>♿ Wheelchair Accessible</div>
-                    <div>🖖 Sign-Language</div>
-                    <div>🦯 Vision Assistance</div>
-                    <div>🅿 Accessible Parking</div>
-                    <div>🚻 Accessible Washrooms</div>
-                    <div>♿ Reserved Seating</div>
-
+                    {
+                        accessibility.map(acc=> <AccessibilityTag acc={acc}/>)
+                    }
+                    
                 </div>
+                <h3 class="h3-small">For More Information on Acessibility Services:</h3>
+                <p class="txt-sm"><span class="icon">📞</span> Please call <a href={'phone:'+organizer.contactNumber}>{organizer.contactNumber}</a></p>
             </section>
             <section>
                 <h2>Ticket Price & Selection</h2>
                 <form>
-                    <div class="ticket-row">
-                        <label><strong>General Admission</strong> (13-64)</label>
-                        <p>$34.99</p>
-                        <Ticker/>
-
-                    </div>
-                    <div class="ticket-row">
-                        <label><strong>Children Ticket</strong> (6-12)</label>
-                        <p>$29.99</p>
-                        <Ticker/>
-                    </div>
-                    <div class="ticket-row">
-                        <label><strong>Senior Ticket</strong> (65+)</label>
-                        <p>$24.99</p>
-                        <Ticker/>
-
-                    </div>
+                    {
+                        tickets.map((ticket,index)=>{
+                            return(
+                            <div class="ticket-row">
+                                <label><strong>{ticket.type}</strong> ({ticket.demo})</label>
+                                <p>${ticket.price}</p>
+                                <Ticker id={"ticket_"+index} name={"ticket_"+index}/>
+                            </div>
+                            )
+                        })
+                    }
                 </form>
 
             </section>
-            <section>
+            <section >
                 <h2>Event Reviews</h2>
-                <div className="reviews-container">
+                <div className="reviews-container no-padding">
                     {/* Turn this into a component if needed */}
-                    <div className="review">
-                        <h3>Radhika Sharma, Toronto</h3>
-                        <span>⭐⭐⭐⭐</span>
-                        <p>"The Bollywood Blackout night event was super fun! The music was great, the atmosphere was lively, and the dance floor was packed. I wish there were more traditional Bollywood songs played instead of just the latest remixes. Overall, a great night out!"</p>
-                    </div>
-                    <div className="review">
-                        <h3>Harpreet Singh, Toronto</h3>
-                        <span>⭐⭐⭐⭐⭐</span>
-                        <p>"I had a blast at the Bollywood Blackout night event. The energy was high, and everyone was having a great time. Bar lines were pretty long with pricey drinks. Waiting for the next Bollywood Blackout Night to attend!"</p>
-                    </div>
+                    {
+                        reviews.map(review => <ReviewCard review={review}/>)
+                    }
                 </div>
             </section>
             <section>
                 <h2>Refund Policy</h2>
-                <p><em>Please note that ticket purchases on the following event is not subject to refunds. All purchases are final. </em></p>
+                <p class="italics">Please note that ticket purchases on the following event is not subject to refunds. All purchases are final.</p>
             </section>
         </div>
     </div>

@@ -10,6 +10,10 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
 }
 
+.italics {
+    font-style: italic;
+}
+
 /********** TICKER *******/
 .ticker-container {
     display: flex;
@@ -45,4 +49,46 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/********** REVIEW *******/
+
+.review {
+    background: linear-gradient(180deg, rgba(126, 139, 255, 0.222) 7.29%, rgba(126, 139, 255, 0) 100%);
+    padding: 0.75em 1.5em;
+    border-radius: 1em;
+    z-index: 2;
+}
+
+.review p {
+    font-size: 0.9em !important;
+}
+
+.review h3 {
+    margin: 0.75em 0;
+}
+
+/* ACCESSIBILTIYTAG */
+.acc-tag {
+    background-color: lightgrey;
+    border-radius: 20px;
+    display: flex;
+    font-weight: bolder;
+    font-size: 0.65em;
+    align-items: center;
+    padding: 1em;
+    
+}
+.acc-tag .icon {
+    color: var(--primary-blue);
+    flex-shrink: 1;
+}
+.acc-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.h3-small {
+    font-size: 0.8em;
+    margin: 1.4em 0;
 }

@@ -1,9 +1,9 @@
 import {useState} from 'react';
 
-export default function Ticker(){
+export default function Ticker(props){
     const [tickValue, setTickValue] = useState(0);
-    const MAXVALUE = 10;
-    const MINVALUE = 0;
+    const MAXVALUE = props.max || 10;
+    const MINVALUE = props.min || 0;
     function increase(){
         if(tickValue >= MAXVALUE) return;
         setTickValue(parseInt(tickValue) + 1);
@@ -20,7 +20,7 @@ export default function Ticker(){
     return (
         <div className="ticker-container">
             <button type="button" onClick={decrease}>-</button>
-            <input type="number" onChange={manualInput} value={parseInt(tickValue)}/>
+            <input type="number" name={props.name} id={props.id} onChange={manualInput} value={parseInt(tickValue)}/>
             <button type="button" onClick={increase}>+</button>
         </div>
     )
