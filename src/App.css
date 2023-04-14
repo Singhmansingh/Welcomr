@@ -9,3 +9,115 @@
     background-color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
 }
+
+.italics {
+    font-style: italic;
+}
+
+/********** TICKER *******/
+.ticker-container {
+    display: flex;
+    background: linear-gradient(180deg, rgba(126, 139, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+    border-radius: 1em;
+    overflow: hidden;
+    min-height: 2.25em;
+}
+
+.ticker-container button {
+    flex: 1;
+    background: none;
+    transition: background-color ease 250ms;
+}
+
+.ticker-container button:hover {
+    background: rgba(5, 5, 5, 0.082);
+}
+
+.ticker-container input {
+    flex: 1;
+    padding: 0;
+    text-align: center;
+    place-items: center;
+    display: grid;
+    width: 100%;
+    border: none;
+    background: none;
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/********** REVIEW *******/
+
+.review {
+    background: linear-gradient(180deg, rgba(126, 139, 255, 0.222) 7.29%, rgba(126, 139, 255, 0) 100%);
+    padding: 0.75em 1.5em;
+    border-radius: 1em;
+    z-index: 2;
+}
+
+.review p {
+    font-size: 0.9em !important;
+}
+
+.review h3 {
+    margin: 0.75em 0;
+}
+
+/* ACCESSIBILTIYTAG */
+.acc-tag {
+    background-color: lightgrey;
+    border-radius: 20px;
+    display: flex;
+    font-weight: bolder;
+    font-size: 0.65em;
+    align-items: center;
+    padding: 1em;
+    
+}
+.acc-tag .icon {
+    color: var(--primary-blue);
+    flex-shrink: 1;
+}
+.acc-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.h3-small {
+    font-size: 0.8em;
+    margin: 1.4em 0;
+}
+
+/******** EVENT INFO CARD************/
+.event-info-card {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75em;
+
+}
+
+.event-info-card h3 {
+    margin: 0;
+}
+
+.icon-box-container {
+    flex-shrink: 1;
+}
+
+.event-info-content {
+    font-size: 0.75em;
+}
+
+.icon-box {
+    border-radius: 0.5em;
+    min-width: 45px;
+    min-height: 45px;
+    background-color: var(--light-grey);
+    display: grid;
+    place-items: center;
+}
