@@ -191,3 +191,9 @@ section h2 {
     margin: 0 -10px;
 }
 
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}

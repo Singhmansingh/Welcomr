@@ -1,4 +1,5 @@
 import AccessibilityTag from '../components/AccessibilityTag';
+import { EventInfoCard } from '../components/EventInfoCard';
 import ReviewCard from '../components/ReviewCard';
 import Ticker from '../components/Ticker';
 import './EventDetails.css';
@@ -77,6 +78,9 @@ export default function EventDetails(){
     const reviews=EVENT.event_reviews;
 
     const organizer=EVENT.event_organizer;
+    const dateDetails="Sat. Sept. 30th, 2023 8:00PM EST";
+    const locationDetails=EVENT.event_location.location_common_address();
+    const locationName=EVENT.event_location.location_name;
 
     const format = (value) => Intl.NumberFormat('en-US').format(value);
 
@@ -111,7 +115,8 @@ export default function EventDetails(){
             <section>
                 <h2>When and Where</h2>
                 <div className="columns">
-                    {/* Date & Location */}
+                    <EventInfoCard icon='🕐' type="Date & Time" content={dateDetails} />
+                    <EventInfoCard icon='❗' type="Location" content={locationDetails} title={locationName} />
                 </div>
             </section>
             <section>
