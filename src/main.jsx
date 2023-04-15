@@ -7,6 +7,7 @@ import {
 import './index.css'
 
 import App from './App'
+import Home from './screens/Home';
 import EventDetails from './screens/EventDetails';
 
 
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<h1>Wayfinding Homepage</h1>
+        element: <Home/>
       },
       {
         path: "eventDetails",

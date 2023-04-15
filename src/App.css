@@ -1,5 +1,4 @@
 #root {
-
     max-width: var(--screen-width);
     height: min(100%,var(--screen-height));
     min-height: calc(var(--screen-height) * 0.65);

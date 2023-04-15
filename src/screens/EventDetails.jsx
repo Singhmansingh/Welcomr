@@ -131,8 +131,8 @@ export default function EventDetails(){
                     }
                     
                 </div>
-                <h3 class="h3-small">For More Information on Acessibility Services:</h3>
-                <p class="txt-sm"><span class="icon">📞</span> Please call <a href={'phone:'+organizer.contactNumber}>{organizer.contactNumber}</a></p>
+                <h3 className="h3-small">For More Information on Acessibility Services:</h3>
+                <p className="txt-sm"><span className="icon">📞</span> Please call <a href={'phone:'+organizer.contactNumber}>{organizer.contactNumber}</a></p>
             </section>
             <section>
                 <h2>Ticket Price & Selection</h2>
@@ -140,7 +140,7 @@ export default function EventDetails(){
                     {
                         tickets.map((ticket,index)=>{
                             return(
-                            <div class="ticket-row">
+                            <div className="ticket-row">
                                 <label><strong>{ticket.type}</strong> ({ticket.demo})</label>
                                 <p>${ticket.price}</p>
                                 <Ticker id={"ticket_"+index} name={"ticket_"+index}/>
@@ -162,7 +162,7 @@ export default function EventDetails(){
             </section>
             <section>
                 <h2>Refund Policy</h2>
-                <p class="italics">Please note that ticket purchases on the following event is not subject to refunds. All purchases are final.</p>
+                <p className="italics">Please note that ticket purchases on the following event is not subject to refunds. All purchases are final.</p>
             </section>
         </div>
     </div>

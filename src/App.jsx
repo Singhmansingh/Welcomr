@@ -5,17 +5,13 @@ function App() {
   return (
     <div className="App">
 
-      <header class="header">Header Stuff</header>
-
-      <main class="content">
+      <main className="content">
 
         {/* children component will replance the <Outlet/> when their path is used */ }
 
         <Outlet/>
 
       </main>
-
-      <footer class="navbar">Navbar Stuff</footer>
       
     </div>
   )
