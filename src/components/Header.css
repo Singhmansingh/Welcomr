@@ -1,4 +1,6 @@
 .header {
+    position: sticky;
+    top: 0;
     background-color: var(--primary-blue);
     display: flex;
     flex-flow: column nowrap;
