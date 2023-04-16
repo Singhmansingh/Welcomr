@@ -1,6 +1,5 @@
 import CommunitySection from "../components/CommunitySection";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 import "./Home.css";
 
@@ -49,7 +48,6 @@ const communityData = {
 const Home = () => {
   return (
     <div>
-    <Header/>
     <main className="community">
       <div className="community-main" style={{backgroundImage:`url(src/assets/community/${communityData.id}.png)`}}>
         <h1>Welcome to the {communityData.communityName}</h1>
@@ -61,7 +59,6 @@ const Home = () => {
         })
       }
     </main>
-    <Footer/>
     </div>
   );
 };
