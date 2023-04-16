@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <footer className="footer">
         {footerIcons.sort( (a, b) => a.order - b.order).map( v => {
-          return <FooterIcon image={v.image} name={v.name}/>
+          return <FooterIcon key={"footer_" + v.name} image={v.image} name={v.name}/>
         })}
     </footer>
   );

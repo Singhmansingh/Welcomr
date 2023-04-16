@@ -85,7 +85,7 @@ export default function EventDetails(){
     const format = (value) => Intl.NumberFormat('en-US').format(value);
 
     return (
-    <div id="EventDetails">
+    <main id="EventDetails">
         <div className="details-heading" style={{backgroundImage:`url(src/assets/event_picture.png)`}}>
             <div className="event-name">
                 <div className="heading">
@@ -165,6 +165,6 @@ export default function EventDetails(){
                 <p className="italics">Please note that ticket purchases on the following event is not subject to refunds. All purchases are final.</p>
             </section>
         </div>
-    </div>
+    </main>
     )
 }

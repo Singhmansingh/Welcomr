@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+
 .header {
     position: sticky;
     top: 0;
@@ -19,19 +23,25 @@
 }
 
 .header-section {
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
 }
 
+.header-section img {
+    cursor: pointer;
+}
+
 #img-account {
+    margin-left: 5%;
     max-width: 10%;
 }
 
 #img-bell {
+    margin-right: 5%;
     max-width: 8%;
 }
 
@@ -55,6 +65,8 @@
 
 .search-bar input {
     width: 80%;
+    font-family: 'Inter';
+    font-weight: 300;
     font-size: 0.6em;
     color: #C0C0C1;
 	padding: 0;

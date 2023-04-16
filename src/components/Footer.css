@@ -14,6 +14,13 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
+    margin: 0 4%;
+    padding: 1%;
     color: white;
+    cursor: pointer;
+}
+
+.footer-icon:hover {
+    background: rgba(230, 242, 255, 0.17);
+    border-radius: 10px;
 }
