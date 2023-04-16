@@ -24,12 +24,12 @@ const router = createBrowserRouter([
         path:"/",
         element: <Home/>
       },
-      {
-        path: "eventDetails",
-        element: <EventDetails/>
-      }
     ]
   },
+  {
+    path:'/eventDetails',
+    element: <EventDetails/>
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
