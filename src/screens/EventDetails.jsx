@@ -88,7 +88,7 @@ export default function EventDetails(){
     const format = (value) => Intl.NumberFormat('en-US').format(value);
 
     return (
-    <div id="EventDetails">
+    <main id="EventDetails">
         <div className="details-heading" style={{backgroundImage:`linear-gradient(#ffffff00 95%, #fff ), url(${EVENT.event_thumbnail})`}}>
             <div className="event-name">
                 <div className="heading">
