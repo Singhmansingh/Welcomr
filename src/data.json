@@ -1,0 +1,355 @@
+{
+    "events":[
+        {
+            "event_id":857493201236,
+            "event_name":"Downtown Jazz Festival",
+            "event_general_price": 49.99,
+            "event_thumbnail": "https://picsum.photos/500",
+            "event_rating":4.2,
+            "event_following": 310,
+            "event_date": "06-15-2023",
+            "event_location": {
+            "location_id": 3492174,
+            "location_name": "Roy Thompson Hall",
+            "location_address": "60 Simcoe St.",
+            "location_city":"Toronto",
+            "location_state_code":"ON",
+            "location_postal_code":"M5J 2H5"
+            },
+            "event_accessibility":[
+            {"icon": "♿","title":"Wheelchair Accessible"},
+            {"icon": "🚻","title":"Accessible Washrooms"},
+            {"icon": "🅿","title":"Accessible Parking"},
+            {"icon": "🎧","title":"Assistive Listening Devices"}
+            ],
+            "event_tickets":[
+            {
+            "type":"General Admission",
+            "demo":"13+",
+            "price":49.99
+            }
+            ],
+            "event_organizer":{
+            "organizer_id":112374923,
+            "organizer_name":"Toronto Jazz Club",
+            "organizer_followers":9865,
+            "organizer_contactNumber":"(416)-758-2335"
+            },
+            "event_reviews":[
+            {
+            "username":"David Chang",
+            "city":"Toronto",
+            "rating":4.5,
+            "message":"The jazz festival was amazing! The performers were so talented and the atmosphere was lively. The only downside was the expensive drinks at the bar."
+            },
+            {
+            "username":"Sophia Lee",
+            "city":"Toronto",
+            "rating":4.0,
+            "message":"The jazz festival was a great time! The music was great and the venue was beautiful. I would definitely go again."
+            }
+            ]
+        },
+        {
+            "event_id":293949172654,
+            "event_name":"Bollywood Blackout Night",
+            "event_general_price": 34.99,
+            "event_thumbnail": "https://picsum.photos/500",
+            "event_rating":4.5,
+            "event_following": 226,
+            "event_date": "09-30-2023",
+            "event_location": {
+                "location_id": 2093283,
+                "location_name": "The Rec Room",
+                "location_address": "255 Bremner Blvd.",
+                "location_city":"Toronto",
+                "location_state_code":"ON",
+                "location_postal_code":"M5V 3M9"
+            },
+            "event_accessibility":[
+                {"icon": "♿","title":"Wheelchair Accessible"},
+                {"icon": "🖖","title":"Sign-Language"},
+                {"icon": "🦯","title":"Vision Assistance"},
+                {"icon": "🅿","title":"Accessible Parking"},
+                {"icon": "🚻","title":"Accessible Washrooms"},
+                {"icon": "♿","title":"Reserved Seating"}
+            ],
+            "event_tickets":[
+                {
+                    "type":"General Admission",
+                    "demo":"13-64",
+                    "price":34.99
+                },
+                {
+                    "type":"Child Ticket",
+                    "demo":"6-12",
+                    "price":29.99
+                },
+                {
+                    "type":"Senior Ticket",
+                    "demo":"65+",
+                    "price":24.99
+                }
+            ],
+            "event_organizer":{
+                "organizer_id":222938231,
+                "organizer_name":"Toronto Bollywood Club",
+                "organizer_followers":15678,
+                "organizer_contactNumber":"(416)-598-3839"
+            },
+            "event_reviews":[
+                {
+                    "username":"Radhika Sharma",
+                    "city":"Toronto",
+                    "rating":4,
+                    "message":"The Bollywood Blackout night event was super fun! The music was great, the atmosphere was lively, and the dance floor was packed. I wish there were more traditional Bollywood songs played instead of just the latest remixes. Overall, a great night out!"
+                },
+                {
+                    "username":"Harpreet Singh",
+                    "city":"Toronto",
+                    "rating":5,
+                    "message":"I had a blast at the Bollywood Blackout night event. The energy was high, and everyone was having a great time. Bar lines were pretty long with pricey drinks. Waiting for the next Bollywood Blackout Night to attend!"
+                }
+            ]
+    
+        },
+        {
+            "event_id":857493201236,
+            "event_name":"Summer Beach Party",
+            "event_general_price": 29.99,
+            "event_thumbnail": "https://picsum.photos/500",
+            "event_rating":4.8,
+            "event_following": 467,
+            "event_date": "08-05-2023",
+            "event_location": {
+            "location_id": 2394583,
+            "location_name": "Woodbine Beach",
+            "location_address": "1675 Lake Shore Blvd E",
+            "location_city":"Toronto",
+            "location_state_code":"ON",
+            "location_postal_code":"M4L 3W6"
+            },
+            "event_accessibility":[
+            {"icon": "♿","title":"Wheelchair Accessible"},
+            {"icon": "🚻","title":"Accessible Washrooms"},
+            {"icon": "🅿","title":"Accessible Parking"},
+            {"icon": "🌊","title":"Beach Accessible"}
+            ],
+            "event_tickets":[
+            {
+            "type":"General Admission",
+            "demo":"16+",
+            "price":29.99
+            },
+            {
+            "type":"Child Ticket",
+            "demo":"5-15",
+            "price":19.99
+            }
+            ],
+            "event_organizer":{
+            "organizer_id":672894521,
+            "organizer_name":"Toronto Beach Club",
+            "organizer_followers":782,
+            "organizer_contactNumber":"(416)-893-2394"
+            },
+            "event_reviews":[
+            {
+            "username":"Samantha Lee",
+            "city":"Toronto",
+            "rating":4.5,
+            "message":"I had a great time at the Summer Beach Party! The music was great and the beach setting was perfect. The only downside was the long lines for food and drinks."
+            },
+            {
+            "username":"Mike Chen",
+            "city":"Toronto",
+            "rating":5.0,
+            "message":"The Summer Beach Party was a blast! The atmosphere was fun and energetic, and the music kept everyone dancing all night long. Would definitely recommend!"
+            }
+            ]
+        },
+        {
+            "event_id": 48271943829,
+            "event_name": "Winter Wonderland Ice Skating",
+            "event_general_price": 19.99,
+            "event_thumbnail": "https://picsum.photos/500",
+            "event_rating": 4.8,
+            "event_following": 543,
+            "event_date": "12-20-2023",
+            "event_location": {
+            "location_id": 943729134,
+            "location_name": "Nathan Phillips Square",
+            "location_address": "100 Queen St. W",
+            "location_city": "Toronto",
+            "location_state_code": "ON",
+            "location_postal_code": "M5H 2N1"
+            },
+            "event_accessibility": [
+            {
+            "icon": "♿",
+            "title": "Wheelchair Accessible"
+            },
+            {
+            "icon": "🅿",
+            "title": "Accessible Parking"
+            },
+            {
+            "icon": "🚻",
+            "title": "Accessible Washrooms"
+            },
+            {
+            "icon": "🎿",
+            "title": "Accessible Skiing"
+            }
+            ],
+            "event_tickets": [
+            {
+            "type": "General Admission",
+            "demo": "All ages",
+            "price": 19.99
+            }
+            ],
+            "event_organizer": {
+            "organizer_id": 4389274521,
+            "organizer_name": "Toronto Winter Sports Club",
+            "organizer_followers": 2098,
+            "organizer_contactNumber": "(416)-729-3845"
+            },
+            "event_reviews": [
+            {
+            "username": "Sarah Johnson",
+            "city": "Toronto",
+            "rating": 5,
+            "message": "The Winter Wonderland Ice Skating event was so much fun! Skating under the lights with holiday music playing made for a magical experience. The skate rental was reasonably priced, and the staff were friendly and helpful. Would definitely recommend for a festive winter activity!"
+            },
+            {
+            "username": "Alex Kim",
+            "city": "Toronto",
+            "rating": 4.5,
+            "message": "I had a great time skating at Nathan Phillips Square during the Winter Wonderland event. The rink was well-maintained, and there was plenty of space to skate. The only downside was the long lines to get on the ice, but that's to be expected at a popular event like this. Would definitely come back next year!"
+            }
+            ]
+        },
+        {
+            "event_id": 465293487152,
+            "event_name": "Toronto Food and Drink Festival",
+            "event_general_price": 39.99,
+            "event_thumbnail": "https://picsum.photos/500",
+
+            "event_rating": 4.8,
+            "event_following": 580,
+            "event_date": "07-22-2023",
+            "event_location": {
+            "location_id": 18639273,
+            "location_name": "Ontario Place",
+            "location_address": "955 Lake Shore Blvd W",
+            "location_city": "Toronto",
+            "location_state_code": "ON",
+            "location_postal_code": "M6K 3B9"
+            },
+            "event_accessibility": [
+            {
+            "icon": "♿",
+            "title": "Wheelchair Accessible"
+            },
+            {
+            "icon": "🅿",
+            "title": "Accessible Parking"
+            },
+            {
+            "icon": "🚻",
+            "title": "Accessible Washrooms"
+            }
+            ],
+            "event_tickets": [
+            {
+            "type": "General Admission",
+            "demo": "19+",
+            "price": 39.99
+            },
+            {
+            "type": "VIP Admission",
+            "demo": "19+",
+            "price": 89.99
+            }
+            ],
+            "event_organizer": {
+            "organizer_id": 778392018,
+            "organizer_name": "Toronto Food and Drink Festival",
+            "organizer_followers": 23789,
+            "organizer_contactNumber": "(416)-385-4587"
+            },
+            "event_reviews": [
+            {
+            "username": "Emily Chen",
+            "city": "Toronto",
+            "rating": 5,
+            "message": "I had an amazing time at the Toronto Food and Drink Festival! The food and drinks were delicious, and there were so many options to choose from. The atmosphere was fun and lively, and I would definitely go again next year."
+            },
+            {
+            "username": "Alex Kim",
+            "city": "Toronto",
+            "rating": 4.5,
+            "message": "The Toronto Food and Drink Festival was a great experience! The food was amazing and there were so many vendors to choose from. The only downside was the long lines, but it was worth the wait."
+            }
+            ]
+            },
+            {
+                "event_id":394852749310,
+                "event_name":"Toronto Food & Wine Festival",
+                "event_thumbnail": "https://picsum.photos/500",
+
+                "event_general_price": 59.99,
+                "event_rating":4.7,
+                "event_following": 420,
+                "event_date": "08-20-2023",
+                "event_location": {
+                "location_id": 3892743,
+                "location_name": "Evergreen Brick Works",
+                "location_address": "550 Bayview Ave.",
+                "location_city":"Toronto",
+                "location_state_code":"ON",
+                "location_postal_code":"M4W 3X8"
+                },
+                "event_accessibility":[
+                {"icon": "♿","title":"Wheelchair Accessible"},
+                {"icon": "🅿","title":"Accessible Parking"},
+                {"icon": "🍼","title":"Family Friendly"},
+                {"icon": "🔊","title":"Audio Descriptions Available"}
+                ],
+                "event_tickets":[
+                {
+                "type":"General Admission",
+                "demo":"18+",
+                "price":59.99
+                },
+                {
+                "type":"VIP Ticket",
+                "demo":"18+",
+                "price":99.99
+                }
+                ],
+                "event_organizer":{
+                "organizer_id":943287521,
+                "organizer_name":"Toronto Food & Wine Festival Inc.",
+                "organizer_followers":2789,
+                "organizer_contactNumber":"(416)-786-2938"
+                },
+                "event_reviews":[
+                {
+                "username":"Ashley Wong",
+                "city":"Toronto",
+                "rating":5.0,
+                "message":"I had such an amazing time at the Toronto Food & Wine Festival! The food was incredible and there were so many different vendors to try from. The atmosphere was so lively and fun. Would definitely go back next year!"
+                },
+                {
+                "username":"Robert Kim",
+                "city":"Toronto",
+                "rating":4.5,
+                "message":"The Toronto Food & Wine Festival was a great experience! The food was delicious and the wine selection was fantastic. The only downside was that the lines for the more popular vendors were quite long."
+                }
+                ]
+                }
+
+    ]
+}
