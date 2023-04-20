@@ -4,6 +4,8 @@ import ReviewCard from '../components/ReviewCard';
 import Ticker from '../components/Ticker';
 import './EventDetails.css';
 
+
+
 export default function EventDetails(){
 
     const EVENT = {
@@ -84,9 +86,12 @@ export default function EventDetails(){
 
     const format = (value) => Intl.NumberFormat('en-US').format(value);
 
+
+    const imgUrl = `../../assets/event_picture.png`;
+
     return (
     <main id="EventDetails">
-        <div className="details-heading" style={{backgroundImage:`url(src/assets/event_picture.png)`}}>
+        <div className="details-heading" style={{backgroundImage:`url(${imgUrl})`}}>
             <div className="event-name">
                 <div className="heading">
                 <h1>{EVENT.event_name}</h1>
