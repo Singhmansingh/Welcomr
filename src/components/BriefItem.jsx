@@ -13,7 +13,7 @@ const BriefItem = (props) => {
           <p className="dot"> {props.date? '\u00B7': ""}</p>
           <p>{props.date? props.date: ""}</p>
         </div>
-        <button>View</button>
+        <button><a href="./eventDetails">View</a></button>
       </div>
     );
   };
