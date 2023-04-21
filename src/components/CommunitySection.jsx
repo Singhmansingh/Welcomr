@@ -14,15 +14,24 @@ Props: {
 */
 
 const CommunitySection = (props) => {
-    return (
-      <div className="community-section">
-        <h2>{props.sectionName + " in this community" }</h2>
-        {props.items.map(i => {
-            return <BriefItem key={props.sectionName+"_"+i.id} id={i.id} name={i.name} date={i.date}/>
-        })}
+  return (
+    <div className="community-section">
+      <h2>{props.sectionName + " in this community"}</h2>
+      {props.items.map((i) => {
+        return (
+          <BriefItem
+            key={props.sectionName + "_" + i.id}
+            id={i.id}
+            name={i.name}
+            date={i.date}
+          />
+        );
+      })}
+      <a href="./event">
         <button>{"More " + props.sectionShort}</button>
-      </div>
-    );
-  };
-  
-  export default CommunitySection;
+      </a>
+    </div>
+  );
+};
+
+export default CommunitySection;
