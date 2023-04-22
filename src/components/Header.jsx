@@ -8,7 +8,6 @@ import search from "../assets/header/search.png";
 import filter from "../assets/header/filter.png";
 
 
-
 const Header = () => {
   return (
     <header className="header">

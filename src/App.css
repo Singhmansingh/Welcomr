@@ -3,11 +3,11 @@
     height: min(100%,var(--screen-height));
     min-height: calc(var(--screen-height) * 0.65);
     overflow-y: auto;
-    flex-grow: 1;
-    border: 1px solid lightslategray;
+    border: 1px solid darkslategray;
     position: relative;
+    flex: 1;
     background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.479);
     overflow-x: hidden;
 }
 
