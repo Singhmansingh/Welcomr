@@ -46,16 +46,17 @@ const communityData = {
 }
 
 const Home = () => {
+  const imgUrl = `../../assets/community/${communityData.id}.png`;
   return (
     <div>
     <main className="community">
-      <div className="community-main" style={{backgroundImage:`url(src/assets/community/${communityData.id}.png)`}}>
+      <div className="community-main" style={{backgroundImage:`url(${imgUrl})`}}>
         <h1>Welcome to the {communityData.communityName}</h1>
         <p>{communityData.description}</p>
       </div>
       {
         communityData.sections.map( s => {
-          return <CommunitySection key={communityData.communityName+"_"+s.id} sectionName={s.sectionName} sectionShort={s.sectionShort} items={s.items}/>
+          return <CommunitySection key={communityData.communityName+"_"+s.sectionName} sectionName={s.sectionName} sectionShort={s.sectionShort} items={s.items}/>
         })
       }
     </main>

@@ -4,6 +4,8 @@ import ReviewCard from '../components/ReviewCard';
 import Ticker from '../components/Ticker';
 import './EventDetails.css';
 
+
+
 export default function EventDetails(){
 
     function toCommonAddress(locationData){
@@ -16,7 +18,7 @@ export default function EventDetails(){
         event_name:"Bollywood Blackout Night",
         event_general_price: 34.99,
         event_rating:4.5,
-        event_thumbnail: "https://picsum.photos/500",
+        event_thumbnail: "../../assets/event_picture.pn",
         event_following: 226,
         event_date: new Date('09-30-2023'),
         event_location: {
