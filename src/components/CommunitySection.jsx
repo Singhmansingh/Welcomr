@@ -16,7 +16,7 @@ Props: {
 const CommunitySection = (props) => {
   return (
     <div className="community-section">
-      <h2>{props.sectionName + " in this community"}</h2>
+      <h2>{props.sectionName}</h2>
       {props.items.map((i) => {
         return (
           <BriefItem

@@ -18,7 +18,7 @@ export default function EventDetails(){
         event_name:"Bollywood Blackout Night",
         event_general_price: 34.99,
         event_rating:4.5,
-        event_thumbnail: "../../assets/event_picture.pn",
+        event_thumbnail: "../../assets/event_picture.png",
         event_following: 226,
         event_date: new Date('09-30-2023'),
         event_location: {
