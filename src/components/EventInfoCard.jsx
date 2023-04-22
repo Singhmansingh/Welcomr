@@ -8,7 +8,7 @@ export function EventInfoCard(props){
             </div>
 
             <div className="event-info-content">
-                <h3>{props.type}</h3>
+                <h3 tabIndex={0}>{props.type}</h3>
                 <p>{props.title ? <strong>{props.title}</strong> : ''} {props.content}</p>
             </div>
         </div>

@@ -3,7 +3,7 @@ import { faSignal, faWifi, faBatteryFull  } from "@fortawesome/free-solid-svg-ic
 
 export default function TimeBar(){
     return (
-        <div className="fsb timebar">
+        <div className="fsb timebar" aria-hidden='true'>
             <div className="time">
                 <p>19:02</p>
             </div>

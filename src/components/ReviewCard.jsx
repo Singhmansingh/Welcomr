@@ -14,7 +14,7 @@ export default function ReviewCard(props){
                 stars.push(<FontAwesomeIcon icon={emptyStar}/>);
             }
         }
-        return stars;
+        return (stars.map((star,index) => <span key={'star_'+index}>{star}</span>));
     }
     return(
         <div className="review shadow">

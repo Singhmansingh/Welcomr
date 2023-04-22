@@ -148,11 +148,18 @@ section h2 {
 
 .map {
     width: 100%;
-    min-height: 178px;
+    height: 200px;
     background-color: lightgrey;
     border-radius: 1em;
     display: grid;
     place-items: center;
+    overflow: hidden;
+}
+
+.map img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .accessibility-grid {

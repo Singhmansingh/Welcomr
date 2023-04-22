@@ -28,6 +28,8 @@ export default function EventDetails(){
         event_general_price: 34.99,
         event_rating:4.5,
         event_thumbnail: "../../assets/event_picture.png",
+        event_thumbnail_alt: "A group of people standing on top of a stage.",
+        event_description:"Come and experience the dazzling colours and captivating rhythms of Bollywood at our Bollywood Blackout Night! Dance the night away to bhangra, hip-hop, and traditional Indian music and enjoy our selection of tantalizing Indian dishes and drinks to keep you energized all night long. So come out, show off your moves, and join us for this one-of-a-kind Bollywood Blackout Night!",
         event_following: 226,
         event_date: new Date('09-30-2023'),
         event_location: {
@@ -100,34 +102,59 @@ export default function EventDetails(){
 
     return (
     <main id="EventDetails">
+
+        {/* HEADING */}
+
         <div className="details-heading" style={{backgroundImage:`linear-gradient(#ffffff00 95%, #fff ), url(${EVENT.event_thumbnail})`}}>
             <div className="event-name">
-                <div className="heading">
-                <h1>{EVENT.event_name}</h1>
-                <span className="txt-sm rating"><Icon i={faStar}/> {EVENT.event_rating}</span>
 
+                {/* Event Name */}
+
+                <div className="heading">
+                    <h1>{EVENT.event_name}</h1>
+                    <span className="txt-sm rating"><Icon i={faStar}/> {EVENT.event_rating} <span style={{fontSize:0}}>stars</span></span>
                 </div>
+                
+                {/* Event Price */}
+
                 <div className="txt-sm price shadow">${EVENT.event_general_price}</div>
+
             </div>
+
+            {/* Event Following */}
+
             <p className="txt-sm following"><Icon i={faUsers}/> {format(EVENT.event_following)} People have saved this event!</p>
+
+             {/* Event Organizer */}
+
             <div className="owner-details shadow">
                 <div className="owner">
-                <h2>By <strong>{organizer.organizer_name}</strong></h2>
-                <p className="txt-sm"><strong>{format(organizer.organizer_followers)} Followers</strong></p>
-
+                    <h2>By <strong>{organizer.organizer_name}</strong></h2>
+                    <p className="txt-sm"><strong>{format(organizer.organizer_followers)} Followers</strong></p>
                 </div>
+
                 <div className="follow">
-                <button className="btn-small txt-sm follow-btn shadow">Follow</button>
+                    <button aria-label={"click to follow " + organizer.organizer_name} className="btn-small txt-sm follow-btn shadow">Follow</button>
                 </div>
             </div>
-        </div>
+        </div> 
+
+
         <div className="event-body">
+
+            {/* DESCRIPTION */}
+
             <section>
-                <h2>Event Description</h2>
-                <p>Come and experience the dazzling colours and captivating rhythms of Bollywood at our Bollywood Blackout Night! Dance the night away to bhangra, hip-hop, and traditional Indian music and enjoy our selection of tantalizing Indian dishes and drinks to keep you energized all night long. So come out, show off your moves, and join us for this one-of-a-kind Bollywood Blackout Night! </p>
+                <h2 tabIndex={0}>Event Description</h2>
+                <p>{EVENT.event_description}</p>
             </section>
+
+
+            {/* LOCATION & TIME */}
+
+
             <section>
-                <h2>When and Where</h2>
+                <h2 tabIndex={0}>When and Where</h2>
                 <div className="columns">
                     <EventInfoCard icon={<Icon i={faCalendarCheck}/>} type="Date & Time" content={dateDetails} />
                     <EventInfoCard icon={<Icon i={faLocationDot}/>} type="Location" content={locationDetails} title={locationName} />
@@ -135,28 +162,37 @@ export default function EventDetails(){
             </section>
             <section>
                 <h2>Map & Directions</h2>
-                <div className="map shadow">🗺 Google Map API</div>
+                <div className="map shadow"><img src="assets/event-details/map.jpg" alt={'Google map view of ' + EVENT.event_location.location_name}/></div>
             </section>
+
+
+            {/* ACCESSIBILITY */}
+
+
             <section>
-                <h2>Accessibility & Accommodations</h2>
+                <h2 tabIndex={0}>Accessibility & Accommodations</h2>
                 <div className="accessibility-grid">
                     {
-                        accessibility.map(acc=> <AccessibilityTag acc={acc}/>)
+                        accessibility.map((acc,index)=> <AccessibilityTag key={'acc_tag_' + index} acc={acc}/>)
                     }
                     
                 </div>
                 <h3 className="h3-small">For More Information on Acessibility Services:</h3>
-                <p className="txt-sm"><span className="icon"><Icon i={faPhone}/></span> Please call <a href={'phone:'+organizer.organizer_contactNumber}>{organizer.organizer_contactNumber}</a></p>
+                <p className="txt-sm"><span className="icon"><Icon i={faPhone}/></span> Please call <span style={{fontSize:0}}>{organizer.organizer_name}</span><a aria-label="organizer's phone number"  href={'phone:'+organizer.organizer_contactNumber}>{organizer.organizer_contactNumber}</a></p>
             </section>
+
+            {/* TICKET PURCHASE */}
+
+
             <section id="tickets">
-                <h2>Ticket Price & Selection</h2>
+                <h2 tabIndex={0}>Ticket Price & Selection</h2>
                 <form>
                     {
                         tickets.map((ticket,index)=>{
                             return(
-                            <div className="ticket-row">
-                                <label><strong>{ticket.type}</strong> ({ticket.demo})</label>
-                                <p>${ticket.price}</p>
+                            <div className="ticket-row" key={'ticket_type_' + index}>
+                                <label htmlFor={'ticket_' + index}><strong>{ticket.type}</strong> ({ticket.demo}) <span style={{fontSize: 0}}>${ticket.price}</span></label>
+                                <p aria-hidden='true'>${ticket.price}</p>
                                 <Ticker id={"ticket_"+index} name={"ticket_"+index} tickerFor={ticket.type}/>
                             </div>
                             )
@@ -165,15 +201,20 @@ export default function EventDetails(){
                 </form>
 
             </section>
+
+            {/* REVIEWS */}
+
             <section >
-                <h2>Event Reviews</h2>
+                <h2 tabIndex={0}>Event Reviews</h2>
                 <div className="reviews-container no-padding">
-                    {/* Turn this into a component if needed */}
                     {
-                        reviews.map(review => <ReviewCard review={review}/>)
+                        reviews.map((review,index) => <ReviewCard key={'review_'+index} review={review}/>)
                     }
                 </div>
             </section>
+
+            {/* POLICIES */}
+
             <section>
                 <h2>Refund Policy</h2>
                 <p className="italics">Please note that ticket purchases on the following event is not subject to refunds. All purchases are final.</p>
