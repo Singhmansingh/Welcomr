@@ -12,12 +12,12 @@ const communityData = {
     sectionShort: "Events",
     items: [{
       id: 1001,
-      name: "Bollywood Blackout Night",
+      name: "Bollywood Blackout",
       date: '09-30-2023'
     },
     {
       id: 1002,
-      name: "Colourful Holi Carnival",
+      name: "Diwali Enchantment",
       date: '12-30-2023'
     }]
   }, {
