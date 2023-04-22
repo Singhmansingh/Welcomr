@@ -8,11 +8,17 @@ import './EventDetails.css';
 
 export default function EventDetails(){
 
+    function toCommonAddress(locationData){
+        return `${locationData.location_address},${locationData.location_city}, ${locationData.location_state_code}, ${locationData.location_postal_code}`
+
+    }
+
     const EVENT = {
         event_id:293949172654,
         event_name:"Bollywood Blackout Night",
         event_general_price: 34.99,
         event_rating:4.5,
+        event_thumbnail: "../../assets/event_picture.pn",
         event_following: 226,
         event_date: new Date('09-30-2023'),
         event_location: {
@@ -21,10 +27,7 @@ export default function EventDetails(){
             location_address: "255 Bremner Blvd.",
             location_city:"Toronto",
             location_state_code:"ON",
-            location_postal_code:"M5V 3M9",
-            location_common_address: function(){
-                return `${this.location_address},${this.location_city}, ${this.location_state_code}, ${this.location_postal_code}`
-            }
+            location_postal_code:"M5V 3M9"
         },
         event_accessibility:[
             {icon: '♿',title:"Wheelchair Accessible"},
@@ -81,17 +84,14 @@ export default function EventDetails(){
 
     const organizer=EVENT.event_organizer;
     const dateDetails="Sat. Sept. 30th, 2023 8:00PM EST";
-    const locationDetails=EVENT.event_location.location_common_address();
+    const locationDetails= toCommonAddress(EVENT.event_location);
     const locationName=EVENT.event_location.location_name;
 
     const format = (value) => Intl.NumberFormat('en-US').format(value);
 
-
-    const imgUrl = `../../assets/event_picture.png`;
-
     return (
     <main id="EventDetails">
-        <div className="details-heading" style={{backgroundImage:`url(${imgUrl})`}}>
+        <div className="details-heading" style={{backgroundImage:`linear-gradient(#ffffff00 95%, #fff ), url(${EVENT.event_thumbnail})`}}>
             <div className="event-name">
                 <div className="heading">
                 <h1>{EVENT.event_name}</h1>
