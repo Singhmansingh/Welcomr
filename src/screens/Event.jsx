@@ -1,5 +1,5 @@
 import EventSection from "../components/EventSection";
-
+import Arrow from "../assets/event/arrow.png";
 import "./Event.css";
 
 const eventData = {
@@ -101,7 +101,7 @@ const Event = () => {
         <a href="/">
           <img
             className="backBtnImg"
-            src="../public/assets/community-events/arrow.png"
+            src={Arrow}
             alt="back button"
           />
         </a>
