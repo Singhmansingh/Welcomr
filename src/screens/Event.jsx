@@ -19,6 +19,18 @@ const eventData = {
           name: "Diwali Enchantment",
           price: "$34.99",
         },
+        {
+          id: 2103,
+          ratings: "4.4",
+          name: "Colourful Holi Carnival",
+          price: "$25.99",
+        },
+        {
+          id: 2104,
+          ratings: "3.8",
+          name: "Urban Desi Spring Fest",
+          price: "$34.99",
+        },
       ],
     },
     {
@@ -35,6 +47,18 @@ const eventData = {
           ratings: "4.7",
           name: "Bhangra Vibes",
           price: "$24.99",
+        },
+        {
+          id: 2203,
+          ratings: "4.6",
+          name: "Vaisakhi Mela",
+          price: "$34.99",
+        },
+        {
+          id: 2204,
+          ratings: "4.5",
+          name: "Maha Shivratri Celebrations",
+          price: "$25.99",
         },
       ],
     },
@@ -53,6 +77,18 @@ const eventData = {
           name: "Bharatanatyam Bonanza",
           price: "$29.99",
         },
+        {
+          id: 2303,
+          ratings: "4.7",
+          name: "Garba Getdown",
+          price: "$37.99",
+        },
+        {
+          id: 2304,
+          ratings: "4.4",
+          name: "Punjabi BASH",
+          price: "$29.99",
+        },
       ],
     },
   ],
@@ -61,6 +97,16 @@ const eventData = {
 const Event = () => {
   return (
     <div>
+      <div className="back">
+        <a href="/">
+          <img
+            className="backBtnImg"
+            src="../public/assets/community-events/arrow.png"
+            alt="back button"
+          />
+        </a>
+        <p className="backBtn">Back to Community Homepage</p>
+      </div>
       <div>
         {eventData.sections.map((e) => {
           return (
