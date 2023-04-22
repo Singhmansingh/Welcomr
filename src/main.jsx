@@ -1,15 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom';
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
 
-import App from './App'
-import Home from './screens/Home';
-import EventDetails from './screens/EventDetails';
-import EventApp from './EventApp';
+import App from "./App";
+import Home from "./screens/Home";
+import Event from "./screens/Event";
+import EventDetails from "./screens/EventDetails";
+import EventApp from "./EventApp";
 
 // Based on https://reactrouter.com/en/main/start/tutorial
 
@@ -31,17 +29,16 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:'/eventDetails',
-    element: <EventApp/>,
-    children:[
+    path: "/eventDetails",
+    element: <EventApp />,
+    children: [
       {
-        path:"/eventDetails",
-        element: <EventDetails/>
-      }
-    ]
-
-  }
-])
+        path: "/eventDetails",
+        element: <EventDetails />,
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
