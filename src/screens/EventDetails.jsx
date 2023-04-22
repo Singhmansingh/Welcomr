@@ -1,5 +1,6 @@
 import AccessibilityTag from '../components/AccessibilityTag';
 import { EventInfoCard } from '../components/EventInfoCard';
+import { PurchaseFooter } from '../components/PurchaseFooter';
 import ReviewCard from '../components/ReviewCard';
 import Ticker from '../components/Ticker';
 import './EventDetails.css';

@@ -5,6 +5,7 @@
     overflow-y: auto;
     flex-grow: 1;
     border: 1px solid lightslategray;
+    position: relative;
     background-color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
 }

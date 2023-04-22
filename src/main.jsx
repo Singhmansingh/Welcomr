@@ -9,6 +9,7 @@ import './index.css'
 import App from './App'
 import Home from './screens/Home';
 import EventDetails from './screens/EventDetails';
+import EventApp from './EventApp';
 
 
 // Based on https://reactrouter.com/en/main/start/tutorial
@@ -28,7 +29,14 @@ const router = createBrowserRouter([
   },
   {
     path:'/eventDetails',
-    element: <EventDetails/>
+    element: <EventApp/>,
+    children:[
+      {
+        path:"/eventDetails",
+        element: <EventDetails/>
+      }
+    ]
+
   }
 ])
 
