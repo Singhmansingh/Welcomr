@@ -12,7 +12,6 @@ function App() {
       {/* children component will replance the <Outlet/> when their path is used */ }
       <Outlet/>
     <Footer/>
-
     </div>
   )
 }

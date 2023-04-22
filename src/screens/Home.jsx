@@ -6,41 +6,41 @@ import "./Home.css";
 const communityData = {
   id: 1001,
   communityName: "Indian Community",
-  description: "Short Description",
+  description: "Discover, connect, and celebrate Indian culture at our online hub for the Indian community. Join us for captivating content, engaging discussions, and a warm, welcoming community.",
   sections: [{
     sectionName: "Global Events",
     sectionShort: "Events",
     items: [{
       id: 1001,
-      name: "Event Name1",
-      date: "Date of event"
+      name: "Bollywood Blackout",
+      date: '09-30-2023'
     },
     {
       id: 1002,
-      name: "Event Name2",
-      date: "Date of event"
+      name: "Diwali Enchantment",
+      date: '12-30-2023'
     }]
   }, {
     sectionName: "Restaurants",
     sectionShort: "Restaurants",
     items: [{
       id: 2001,
-      name: "Restaurant Name 1"
+      name: "Spice Junction"
     },
     {
       id: 2002,
-      name: "Restaurant Name 2"
+      name: "Tandoori Delights"
     }]
   }, {
     sectionName: "Grocery stores",
     sectionShort: "Stores",
     items: [{
       id: 3001,
-      name: "Store Name 1",
+      name: "Curry Mart",
     },
     {
       id: 3002,
-      name: "Store Name 2",
+      name: "Saffron Supermarket",
     }]
   }]
 }

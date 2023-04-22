@@ -11,21 +11,29 @@ import Home from './screens/Home';
 import EventDetails from './screens/EventDetails';
 import EventApp from './EventApp';
 
+import App from "./App";
+import Home from "./screens/Home";
+import Event from "./screens/Event";
+import EventDetails from "./screens/EventDetails";
 
 // Based on https://reactrouter.com/en/main/start/tutorial
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element: <App/>,
-    
+    path: "/",
+    element: <App />,
+
     // Place app screens here
-    children:[
+    children: [
       {
-        path:"/",
-        element: <Home/>
+        path: "/",
+        element: <Home />,
       },
-    ]
+      {
+        path: "/event",
+        element: <Event />,
+      },
+    ],
   },
   {
     path:'/eventDetails',
@@ -40,8 +48,8 @@ const router = createBrowserRouter([
   }
 ])
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

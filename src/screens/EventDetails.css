@@ -31,6 +31,9 @@
 
 .details-heading {
     height: 519px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -173,6 +176,8 @@ section h2 {
     grid-template-columns: 2fr 1fr 1fr;
     align-items: center;
 }
+
+
 
 .ticket-row label {
     flex-basis: 3;

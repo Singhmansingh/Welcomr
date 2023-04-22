@@ -3,7 +3,7 @@
 
 .community {
     font-family: 'Inter', sans-serif;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .community-main {
@@ -49,6 +49,16 @@
     border-radius: 30px;
 }
 
+.community-section a {
+    text-decoration: none;
+    align-self: center;
+}
+
+
+.community-section > a > button {
+    padding: 0.25em 1em;
+}
+
 .community-section > button {
     font-size: 0.875em;
     height: 27px;
@@ -82,17 +92,17 @@
     font-weight: 600;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
     font-size: 0.875em;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
 }
 
 .brief-item-text p {
     font-size: 0.625em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .dot {
     font-size: 1em !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 5px !important;
 } 
 
 .brief-item button {
