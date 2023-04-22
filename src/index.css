@@ -15,6 +15,7 @@ html {
   /* color pallet */
   --light-grey: rgba(238, 238, 238, 1);
   --primary-blue:rgba(126, 139, 255, 1);
+  --star: #FFDA15;
 }
 
 *,*::before,*::after {
@@ -30,4 +31,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.fs {
+  flex-shrink: 1;
+}
+
+.fg {
+  flex-grow: 1;
+}
+
+
+.shadow {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.719);;
+}
+
+.va {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsb {
+  display: flex;
+  justify-content: space-between;
 }

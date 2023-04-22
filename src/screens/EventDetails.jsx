@@ -4,14 +4,22 @@ import { PurchaseFooter } from '../components/PurchaseFooter';
 import ReviewCard from '../components/ReviewCard';
 import Ticker from '../components/Ticker';
 import './EventDetails.css';
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faStar , faUsers, faLocationDot, 
+    faPhone,
+  } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck } from '@fortawesome/free-regular-svg-icons';
 
 export default function EventDetails(){
 
     function toCommonAddress(locationData){
         return `${locationData.location_address},${locationData.location_city}, ${locationData.location_state_code}, ${locationData.location_postal_code}`
 
+    }
+
+    function Icon(props){
+        return ( <FontAwesomeIcon icon={props.i}/> );
     }
 
     const EVENT = {
@@ -31,12 +39,12 @@ export default function EventDetails(){
             location_postal_code:"M5V 3M9"
         },
         event_accessibility:[
-            {icon: '♿',title:"Wheelchair Accessible"},
-            {icon: '🖖',title:"Sign-Language"},
-            {icon: '🦯',title:"Vision Assistance"},
-            {icon: '🅿',title:"Accessible Parking"},
-            {icon: '🚻',title:"Accessible Washrooms"},
-            {icon: '♿',title:"Reserved Seating"},
+            {icon: 'faWheelchairMove',title:"Wheelchair Accessible"},
+            {icon: 'faHandsAslInterpreting',title:"Sign-Language"},
+            {icon: 'faPersonWalkingWithCane',title:"Vision Assistance"},
+            {icon: 'faParking',title:"Accessible Parking"},
+            {icon: 'faUniversalAccess',title:"Accessible Washrooms"},
+            {icon: 'faWheelchair',title:"Reserved Seating"},
             
         ],
         event_tickets:[
@@ -96,12 +104,12 @@ export default function EventDetails(){
             <div className="event-name">
                 <div className="heading">
                 <h1>{EVENT.event_name}</h1>
-                <span className="txt-sm rating">⭐{EVENT.event_rating}</span>
+                <span className="txt-sm rating"><Icon i={faStar}/> {EVENT.event_rating}</span>
 
                 </div>
                 <div className="txt-sm price shadow">${EVENT.event_general_price}</div>
             </div>
-            <p className="txt-sm following">👯‍♀️ {format(EVENT.event_following)} People have saved this event!</p>
+            <p className="txt-sm following"><Icon i={faUsers}/> {format(EVENT.event_following)} People have saved this event!</p>
             <div className="owner-details shadow">
                 <div className="owner">
                 <h2>By <strong>{organizer.organizer_name}</strong></h2>
@@ -121,8 +129,8 @@ export default function EventDetails(){
             <section>
                 <h2>When and Where</h2>
                 <div className="columns">
-                    <EventInfoCard icon='🕐' type="Date & Time" content={dateDetails} />
-                    <EventInfoCard icon='❗' type="Location" content={locationDetails} title={locationName} />
+                    <EventInfoCard icon={<Icon i={faCalendarCheck}/>} type="Date & Time" content={dateDetails} />
+                    <EventInfoCard icon={<Icon i={faLocationDot}/>} type="Location" content={locationDetails} title={locationName} />
                 </div>
             </section>
             <section>
@@ -138,9 +146,9 @@ export default function EventDetails(){
                     
                 </div>
                 <h3 className="h3-small">For More Information on Acessibility Services:</h3>
-                <p className="txt-sm"><span className="icon">📞</span> Please call <a href={'phone:'+organizer.contactNumber}>{organizer.contactNumber}</a></p>
+                <p className="txt-sm"><span className="icon"><Icon i={faPhone}/></span> Please call <a href={'phone:'+organizer.organizer_contactNumber}>{organizer.organizer_contactNumber}</a></p>
             </section>
-            <section>
+            <section id="tickets">
                 <h2>Ticket Price & Selection</h2>
                 <form>
                     {
@@ -149,7 +157,7 @@ export default function EventDetails(){
                             <div className="ticket-row">
                                 <label><strong>{ticket.type}</strong> ({ticket.demo})</label>
                                 <p>${ticket.price}</p>
-                                <Ticker id={"ticket_"+index} name={"ticket_"+index}/>
+                                <Ticker id={"ticket_"+index} name={"ticket_"+index} tickerFor={ticket.type}/>
                             </div>
                             )
                         })

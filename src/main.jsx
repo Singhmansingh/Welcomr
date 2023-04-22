@@ -10,6 +10,7 @@ import App from './App'
 import Home from './screens/Home';
 import EventDetails from './screens/EventDetails';
 import EventApp from './EventApp';
+import Event from './screens/Event';
 
 // Based on https://reactrouter.com/en/main/start/tutorial
 
