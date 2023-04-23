@@ -7,6 +7,9 @@ Props: {
 */
 
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as emptyHeart } from "@fortawesome/free-regular-svg-icons";
 
 const EventCard = (props) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -23,13 +26,13 @@ const EventCard = (props) => {
         <div className="event-img">
           <img src={cardImg} alt={props.name} width="200" height="130"></img>
         </div>
-        <span
-          className={`heart ${isLiked ? "active" : ""}`}
-          id="heart"
-          onClick={handleLikeClick}
-        >
-          &#9825;
-        </span>
+        {
+          isLiked ?
+            <button onClick={handleLikeClick} className="heart active"><FontAwesomeIcon icon={faHeart} /></button>
+            :
+            <button onClick={handleLikeClick} className="heart"><FontAwesomeIcon icon={emptyHeart} /></button>
+
+        }
         <div className="shadow1"></div>
         <div className="event-ratings">
           &#11088;
