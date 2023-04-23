@@ -17,11 +17,20 @@ export default function Ticker(props){
         if(value > MAXVALUE || value < MINVALUE) return;
         setTickValue(value);
     }
+
+    const decreseId = (Math.random() + 1).toString(36).substring(10);
+    const increaseId = (Math.random() + 1).toString(36).substring(10);
+
     return (
         <div className="ticker-container">
-            <button type="button" onClick={decrease}>-</button>
-            <input type="number" name={props.name} id={props.id} onChange={manualInput} value={parseInt(tickValue)}/>
-            <button type="button" onClick={increase}>+</button>
+
+            <label htmlFor={decreseId} style={{fontSize: 0}}>{props.tickerFor} Remove 1 Ticket</label>
+            <button id={decreseId} type="button" onClick={decrease}>-</button>
+
+            <input aria-atomic="true" type="number" max={MAXVALUE} min={MINVALUE} name={props.name} id={props.id} onChange={manualInput} value={parseInt(tickValue)}/>
+
+            <label htmlFor={increaseId} style={{fontSize: 0}}>{parseInt(tickValue)} {props.tickerFor} Add 1 Ticket</label>
+            <button id={increaseId} type="button" onClick={increase}>+</button>
         </div>
     )
 }

@@ -3,11 +3,12 @@
     height: min(100%,var(--screen-height));
     min-height: calc(var(--screen-height) * 0.65);
     overflow-y: auto;
-    flex-grow: 1;
-    border: 1px solid lightslategray;
+    border: 1px solid darkslategray;
     position: relative;
+    flex: 1;
     background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.479);
+    overflow-x: hidden;
 }
 
 .italics {
@@ -60,6 +61,15 @@ input::-webkit-inner-spin-button {
     z-index: 2;
 }
 
+.review .star-container {
+    color: var(--star);
+}
+
+.star-container svg {
+    stroke: rgba(0, 0, 0, 35%);
+    stroke-width: 4em;
+}
+
 .review p {
     font-size: 0.9em !important;
 }
@@ -74,18 +84,22 @@ input::-webkit-inner-spin-button {
     border-radius: 20px;
     display: flex;
     font-weight: bolder;
-    font-size: 0.65em;
+    font-size: 0.8em;
     align-items: center;
-    padding: 1em;
+    padding: 1.5em 1.2em;
+
+    gap: 0.5em;
     
 }
 .acc-tag .icon {
     color: var(--primary-blue);
     flex-shrink: 1;
+    font-size: 1.2em;
 }
 .acc-text {
     flex-grow: 1;
     text-align: center;
+    line-height: normal;
 }
 
 .h3-small {
@@ -120,4 +134,7 @@ input::-webkit-inner-spin-button {
     background-color: var(--light-grey);
     display: grid;
     place-items: center;
+    font-size: 1.6em;
+    color: var(--primary-blue);
 }
+

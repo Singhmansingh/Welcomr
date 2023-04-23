@@ -8,6 +8,8 @@
     scrollbar-width: none;  /* Firefox */
     
 }
+
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -54,7 +56,7 @@ p {
 }
 
 .rating {
-    color: gold;
+    color: var(--star);
     font-weight: bolder;
 }
 
@@ -66,6 +68,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 
 .following {
@@ -105,21 +108,18 @@ justify-content: space-between;
     color: white;
 }
 
-.shadow {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.185);
-}
 
-button {
+button, .btn {
     border: none;
     transition: filter ease 250ms;
 }
 
-button:hover {
+button:hover, .btn:hover {
     filter: brightness(0.9);
     cursor: pointer;
 }
 
-button:active {
+button:active, .btn:active {
     filter: brightness(0.8);
 
 }
@@ -148,11 +148,18 @@ section h2 {
 
 .map {
     width: 100%;
-    min-height: 178px;
+    height: 200px;
     background-color: lightgrey;
     border-radius: 1em;
     display: grid;
     place-items: center;
+    overflow: hidden;
+}
+
+.map img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .accessibility-grid {
@@ -203,6 +210,51 @@ section h2 {
     gap: 1em;
 }
 
+.floating-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    padding: 1em;
+    padding-bottom: 20px;
+    /* background: linear-gradient(#0000008a 10%, #00000096 90%,#00000000); */
+}
+
+.timebar {
+    font-size: 1.4em;
+}
+
+.status {
+    display: flex;
+    gap: 0.4em;
+}
+
+
+
+.event-header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-top: 2em;;
+}
+
+.event-header .icon {
+    width: 2em;
+    height: 2em;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(126, 126, 126, 0.726);
+}
+
+.event-header .icon:visited {
+    color: white !important;
+}
+
 .floating-footer {
     position: sticky;
     bottom: 0;
@@ -215,7 +267,7 @@ section h2 {
     display: flex;
 }
 
-.floating-footer button {
+.floating-footer button, .floating-footer .btn {
     font:inherit;
     background-color: var(--primary-blue);
     color: white;
@@ -236,7 +288,26 @@ section h2 {
     width: 50px;
     height: 50px;
     border-radius: 1em;
+    transition: transform 250ms ease-out;
 }
+
+.like-btn:active {
+    width: 50px;
+    height: 50px;
+    transform: scale(0.9);
+
+}
+
+@keyframes like-event {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 
 .like-btn.liked {
     background-color: var(--light-grey) !important;
@@ -250,4 +321,20 @@ section h2 {
 .purchase-btn {
     width: 100%;
     height: 100%;
+transition: transform 150ms ease-out;
+
+}
+
+.purchase-btn:active {
+
+    transform: scale(0.9);
+
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
