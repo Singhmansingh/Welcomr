@@ -1,3 +1,6 @@
+.event-page {
+  overflow-x: hidden;
+}
 .card-section {
   display: flex;
   flex-flow: row nowrap;
@@ -39,6 +42,15 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: white;
 }
+.event-link {
+  text-decoration: none;
+  color: inherit;
+}
+.event-link:hover,
+.event-link:active {
+  text-decoration: none;
+  color: inherit;
+}
 .event-price {
   font-size: 10px;
   margin-left: 0.5em;
@@ -66,11 +78,12 @@
 }
 .heart {
   position: absolute;
-  top: 0px;
+  top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 18px;
   color: rgb(255, 255, 255);
   transition: color 0.3s ease;
+  background-color: transparent;
 }
 
 .heart:hover {

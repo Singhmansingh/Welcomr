@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import EventCard from "./EventCard";
+import { EventContext } from "../contexts/EventContext";
 
 /*
 Props: {
@@ -13,6 +15,9 @@ Props: {
 */
 
 const EventSection = (props) => {
+
+  // using a global event context for consistancy
+  const EVENT = useContext(EventContext)
   return (
     <div>
       <h2 className="sectionName">{props.sectionName}</h2>
@@ -24,7 +29,7 @@ const EventSection = (props) => {
               id={card.id}
               ratings={card.ratings}
               name={card.name}
-              price={card.price}
+              price={card.useContext ? EVENT.event_tickets[0].price :  card.price}
             />
           );
         })}

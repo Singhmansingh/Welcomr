@@ -21,8 +21,24 @@ import { EventContext } from './contexts/EventContext';
 const EVENT = {
   event_id:293949172654,
   event_name:"Bollywood Blackout Night",
-  event_general_price: 34.99,
   event_rating:4.5,
+  event_tickets:[
+    {
+        type:"General Admission",
+        demo:"13-64",
+        price:34.99
+    },
+    {
+        type:"Child Ticket",
+        demo:"6-12",
+        price:29.99
+    },
+    {
+        type:"Senior Ticket",
+        demo:"65+",
+        price:24.99
+    },
+  ],
   event_thumbnail: "../../assets/event_picture.png",
   event_thumbnail_alt: "A group of people standing on top of a stage.",
   event_description:"Come and experience the dazzling colours and captivating rhythms of Bollywood at our Bollywood Blackout Night! Dance the night away to bhangra, hip-hop, and traditional Indian music and enjoy our selection of tantalizing Indian dishes and drinks to keep you energized all night long. So come out, show off your moves, and join us for this one-of-a-kind Bollywood Blackout Night!",
@@ -45,23 +61,7 @@ const EVENT = {
       {icon: 'faWheelchair',title:"Reserved Seating"},
       
   ],
-  event_tickets:[
-      {
-          type:"General Admission",
-          demo:"13-64",
-          price:34.99
-      },
-      {
-          type:"Child Ticket",
-          demo:"6-12",
-          price:29.99
-      },
-      {
-          type:"Senior Ticket",
-          demo:"65+",
-          price:24.99
-      },
-  ],
+
   event_organizer:{
       organizer_id:222938231,
       organizer_name:'Toronto Bollywood Club',
@@ -105,17 +105,16 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:'/eventDetails',
-    element: <EventApp/>,
-    children:[
+    path: "/eventDetails",
+    element: <EventApp />,
+    children: [
       {
-        path:"/eventDetails",
-        element: <EventDetails/>
-      }
-    ]
-
-  }
-])
+        path: "/eventDetails",
+        element: <EventDetails />,
+      },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

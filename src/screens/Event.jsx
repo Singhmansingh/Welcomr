@@ -12,6 +12,7 @@ const eventData = {
           ratings: "4.7",
           name: "Bollywood Blackout",
           price: "$24.99",
+          useContext: true
         },
         {
           id: 2102,
@@ -96,14 +97,10 @@ const eventData = {
 
 const Event = () => {
   return (
-    <div>
+    <div className="event-page">
       <div className="back">
         <a href="/">
-          <img
-            className="backBtnImg"
-            src={Arrow}
-            alt="back button"
-          />
+          <img className="backBtnImg" src={Arrow} alt="back button" />
         </a>
         <p className="backBtn">Back to Community Homepage</p>
       </div>
