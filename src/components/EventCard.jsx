@@ -37,7 +37,9 @@ const EventCard = (props) => {
         </div>
 
         <div>
-          <p className="event-name">{props.name}</p>
+          <a href="/eventDetails" className="event-link">
+            <p className="event-name">{props.name}</p>
+          </a>
         </div>
 
         <div>
