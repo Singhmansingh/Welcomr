@@ -22,7 +22,7 @@ const Header = () => {
           type="text" 
           placeholder="Festivals, games, concerts"
         />
-        <img src={filter} alt="Custom Filter"/>
+        <img id="img-filter" src={filter} alt="Custom Filter"/>
       </form>
     </header>
   );

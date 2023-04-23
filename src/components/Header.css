@@ -78,3 +78,7 @@
   -moz-appearance: none;
   appearance: none;
 }
+
+#img-filter {
+  cursor: pointer;
+} 
