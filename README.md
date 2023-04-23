@@ -14,6 +14,10 @@
 
 This app is designed to help new comers to a place find events, shops, food and other community highlights. Whether you are just moving to a new area, or looking to reconnect with your culture, let us be your Welcomr.
 
+
+## Live Site
+Visit the Live site here! [Welcomr Live Site](https://welcomr---cultural-hub.glitch.me/)
+
 ## Development
 
 This is a Web application prototype of the Welcomr App, Developed as part of the Humber Web Devleopment Program for IXD 5205. This app was built in with the combined efforts of students in the User Experience, Content Strategy, and Web Devleopment programs. This application features 3 screens that highlight major aspects of the Welcomer Application
@@ -30,3 +34,5 @@ By: [Wenhao Lu](https://github.com/wenhao-lu)
 ### Event Details Page
 By: [Shavin Singh](https://github.com/singhmansingh)
 ![image](https://user-images.githubusercontent.com/64917885/233870741-e5e86b5d-1140-4fd0-8395-7df8c8b96fea.png)
+
+
