@@ -309,11 +309,6 @@ section h2 {
 }
 
 
-.like-btn.liked {
-    background-color: var(--light-grey) !important;
-    color: black !important;
-}
-
 .floating-footer .purchase {
     flex-grow: 1;
 }
