@@ -1,3 +1,6 @@
+.event-page {
+  overflow-x: hidden;
+}
 .card-section {
   display: flex;
   flex-flow: row nowrap;
